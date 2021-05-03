@@ -19,3 +19,8 @@ docker run --rm -it \
 
 The environment var `VOMS` can be set to CMS if you wish to authenticate against 
 that experiment.
+
+By default, it writes the proxy to /etc/grid-security/x509up; this can be changed to a
+different location by setting the X509_USER_PROXY environment variable. This may be
+needed in an environment (e.g. OpenShift) where the container may be running as an
+unprivileged user.
